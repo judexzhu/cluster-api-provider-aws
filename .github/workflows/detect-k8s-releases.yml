@@ -41,7 +41,7 @@ jobs:
           ./bin/release-tool ami detect-k8s-release --token "$GITHUB_TOKEN" --output json > hack/tools/release-tools/internal/ami/k8srelease/data/AMIK8sBuildConfig.json
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@e7f100cf4c008499ea8adda475de1042d6975c7b # v6.2.0
+        uses: aws-actions/configure-aws-credentials@254c19bd240aabef8777f48595e9d2d7b972184b # v6.2.1
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/gh-image-builder
